@@ -1,4 +1,8 @@
 waveio
 ======
 
-Wave file reading and writing
+This library contains classes for reading and writing wave files.
+
+Dependencies
+------------
+* gabi
