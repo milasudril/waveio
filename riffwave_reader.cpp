@@ -311,7 +311,7 @@ void WaveIO::RiffwaveReader::infoRead(Streaminfo& info)
 
 size_t WaveIO::RiffwaveReader::dataRead(void* buffer,size_t buffer_size)
 	{
-	auto ret=m_source.read(buffer,std::min(buffer_size,current_chunk_size));
+	auto ret=m_source.read(buffer,std::min(buffer_size,size_t(current_chunk_size)));
 	current_chunk_size-=ret;
 	return ret;
 	}
