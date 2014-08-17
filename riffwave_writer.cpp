@@ -79,6 +79,8 @@ WaveIO::RiffwaveWriter::~RiffwaveWriter()
 			uint32_t l=length_written;
 			m_dest.write(&l,sizeof(l));
 			}
+		else
+			{return;}
 
 		offset=sizeof(RiffwaveHeader)
 			+8+sizeof(RiffwaveFormat)
