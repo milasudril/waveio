@@ -19,7 +19,7 @@ namespace WaveIO
 				writer(dest)
 				{writer.infoWrite(info);}
 
-			size_t write(sample_t* buffer,size_t n_samples)
+			size_t write(const sample_t* buffer,size_t n_samples)
 				{return writer.write(buffer,n_samples);}
 
 		private:
