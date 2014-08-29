@@ -38,7 +38,7 @@ namespace WaveIO
 			uint32_t channelMaskGet() const
 				{return info.channel_mask;}
 
-			size_t channelCountGet()
+			size_t channelCountGet() const
 				{return data.nRowsGet();}
 
 			size_t lengthGet() const
