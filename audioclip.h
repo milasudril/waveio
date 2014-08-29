@@ -22,6 +22,7 @@ namespace WaveIO
 		{
 		public:
 			AudioClip(Herbs::StreamIn& source);
+			AudioClip(const sample_t* data,size_t length,uint32_t fs);
 
 			bool store(Herbs::StreamOut& dest);
 			bool load(Herbs::StreamIn& source);

@@ -14,6 +14,12 @@ WaveIO::AudioClip::AudioClip(Herbs::StreamIn& source):data(1,1)
 		{throw Herbs::ExceptionMissing(___FILE__,__LINE__);}
 	}
 
+WaveIO::AudioClip::AudioClip(const sample_t* data,size_t length,uint32_t fs):
+	data(1,length),info{fs,1,SPEAKER_FRONT_CENTER}
+	{
+	std::copy(data,data+length,dataGet(0));
+	}
+
 bool WaveIO::AudioClip::load(Herbs::StreamIn& source)
 	{
 	Reader reader(source,info);
